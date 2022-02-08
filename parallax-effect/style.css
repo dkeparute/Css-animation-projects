@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective-origin: 0%;
+    perspective: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.background {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0px);
+    width: 100%;
+}
+.foreground {
+    margin: 25% 0 0 10%;
+}
+
+.foreground__text {
+    color: aliceblue;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 100px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* transform: translateZ(3px) scale(0.625); */
+    /* (perspective - distance) / perspective = scale */
+}
+
+.foreground__inner {
+    display: block;
+    transform: translateZ(3px) scale(0.625);
+}
+
+.forefround__inner--one {
+    transform: translateZ(3px) scale(0.625);
+}
+
+.forefround__inner--two {
+    transform: translateZ(4px) scale(0.5);
+}

@@ -1,0 +1,60 @@
+:root {
+    --primary: #25abd9;
+    --background: #eee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    background: var(--background);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border: solid 4px var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+.circle::after {
+    animation: liquid 6s ease-in-out forwards;
+    background-color: var(--background);
+    border-radius: 40%;
+    content: "";
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle__icon {
+    color: var(--background);
+    font-size: 70px;
+}
+/* Keyframes */
+@keyframes liquid {
+    0% {
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -100%) rotate(500deg);
+    }
+}

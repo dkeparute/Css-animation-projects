@@ -1,0 +1,57 @@
+.container {
+    padding: 100px;
+}
+
+.card {
+    animation: spinCube 8s infinite ease-in-out;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 300px;
+}
+
+.card-face {
+    align-items: center;
+    background-color: aquamarine;
+    border: solid 2px #111;
+    display: flex;
+    font-size: 40px;
+    height: 200px;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+}
+
+.card-face__front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.card-face__back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.card-face__left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.card-face__right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.card-face__top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.card-face__bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes spinCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
